@@ -49,7 +49,6 @@ int main() {
     char line[buffer_size];
     char filename[100];
     int number_of_records = 0;
-    FITNESS_DATA file_data[1000];
     FILE *input;
 
     while (1) {
@@ -88,6 +87,7 @@ int main() {
 
             // Resets the file pointer to the start of the file
             rewind(input);
+            FITNESS_DATA file_data[number_of_records];
 
             char steps[10];
             int stepsint;
